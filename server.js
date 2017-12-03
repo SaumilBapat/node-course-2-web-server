@@ -63,6 +63,14 @@ app.get('/about', (req, res) => {
    });
 });
 
+app.get('/projects', (req, res) => {
+    console.log('Running about /about express page');
+    res.render('projects.hbs', {
+        pageTitle: 'Projects Page',
+        //currentYear: new Date().getFullYear(),
+    });
+});
+
 app.listen(port, () => {
     console.log(`The server is now running on PORT ${port}.`);
 });
